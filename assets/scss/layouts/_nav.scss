@@ -13,7 +13,6 @@ nav {
   background-color: white;
 
   .navInside {
-
     #navtext {
       width: 50%;
       display: flex;
@@ -68,9 +67,7 @@ nav {
               text-decoration: underline;
               color: #abd373;
             }
-
           }
-
         }
       }
 
@@ -94,8 +91,8 @@ nav {
   display: flex;
   align-items: center;
   color: white;
-  overflow-y:scroll;
-  overflow-x:hidden;
+  overflow-y: scroll;
+  overflow-x: hidden;
   height: 100vh;
   transform: translateX(-300px);
 
@@ -134,35 +131,39 @@ nav {
       justify-content: space-between;
       cursor: pointer;
     }
-    .accordion{
-      ul{
-        .acc-inside-ul,
-        .home-inside-ul{
-          li{
-            background-color: rgb(118, 118, 118);
-          }
+    .accordion {
+      a {
+        color: white;
+      }
+      ul {
+        li {
+          width: 100%;
+          padding: 10px;
         }
-        .acc-inside-ul{
-          display: none;
-          transition: 0.5s;
-        }
-        li{
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          height: 50px;
-          cursor: pointer;
-          padding: 5px;
-          a{
-            color: white;
+        .acc-li {
+          .acc-inside-ul {
+            height: 0;
+            overflow: hidden;
+            transform: translateX(-30px);
+            transition: 0.5s;
+            .acc-li-inside {
+              .acc-li-inside-ul {
+                height: 0;
+                overflow: hidden;
+                transform: translateX(-30px);
+                transition: 0.5s;
+              }
+            }
           }
         }
       }
     }
   }
 }
-.active{
-  display: block;
+.active {
+  height: fit-content!important;
+  transform: translateX(0px)!important;
+  transition: 0.5s!important;
 }
 
 @media screen and (max-width: 802px) {
@@ -171,7 +172,7 @@ nav {
   }
 }
 @media screen and (min-width: 802px) {
-  .resp-nav{
-      display: none;
+  .resp-nav {
+    display: none;
   }
 }

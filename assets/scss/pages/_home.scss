@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+#home{
+    font-family: "Rubik", sans-serif;
+    width: 100%;
+    background-image: url('https://htmldemo.net/pronia/pronia/assets/images/slider/bg/1-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    .main{
+        max-width: 60%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        padding: 100px 0;
+        .left{
+            width: 50%;
+            #discount{
+                font-size: 50px;
+            }
+            h1{
+                font-size: 60px;
+                margin: 20px 0;
+            }
+            p{
+                font-size: 20px;
+            }
+        }
+        .right{
+            width: 50%;
+        }
+    }
+    i{
+        position: absolute;
+        padding: 20px 20px;
+        border-radius: 4px;
+        background-color: white;
+        transition: 0.5s;
+        z-index: 1;
+    }
+    i:hover{
+        background-color: #abd373;
+        transition: 0.5s;
+    }
+    .fa-angle-right{
+        right: 0;
+        top: 50%;
+    }
+    .fa-angle-left{
+        left: 0;
+        top: 50%;
+    }
+}

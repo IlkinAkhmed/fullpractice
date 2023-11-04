@@ -1,3 +1,20 @@
+button {
+  font-family: "Rubik", sans-serif;
+  padding: 20px 35px;
+  border-radius: 35px;
+  background-color: #abd373;
+  border-style: none;
+  color: white;
+  font-weight: bold;
+  margin: 10px 10px;
+  transition: 0.5s;
+}
+
+button:hover {
+  background-color: #525252;
+  transition: 0.5s;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -114,28 +131,30 @@ nav .navInside #navtext .nav-item:hover .submenu {
   justify-content: space-between;
   cursor: pointer;
 }
-.resp-nav .resp-nav-inside .accordion ul .acc-inside-ul li,
-.resp-nav .resp-nav-inside .accordion ul .home-inside-ul li {
-  background-color: rgb(118, 118, 118);
-}
-.resp-nav .resp-nav-inside .accordion ul .acc-inside-ul {
-  display: none;
-  transition: 0.5s;
+.resp-nav .resp-nav-inside .accordion a {
+  color: white;
 }
 .resp-nav .resp-nav-inside .accordion ul li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 50px;
-  cursor: pointer;
-  padding: 5px;
+  width: 100%;
+  padding: 10px;
 }
-.resp-nav .resp-nav-inside .accordion ul li a {
-  color: white;
+.resp-nav .resp-nav-inside .accordion ul .acc-li .acc-inside-ul {
+  height: 0;
+  overflow: hidden;
+  transform: translateX(-30px);
+  transition: 0.5s;
+}
+.resp-nav .resp-nav-inside .accordion ul .acc-li .acc-inside-ul .acc-li-inside .acc-li-inside-ul {
+  height: 0;
+  overflow: hidden;
+  transform: translateX(-30px);
+  transition: 0.5s;
 }
 
 .active {
-  display: block;
+  height: fit-content !important;
+  transform: translateX(0px) !important;
+  transition: 0.5s !important;
 }
 
 @media screen and (max-width: 802px) {
@@ -242,10 +261,67 @@ header .headerInside .selectDiv #select {
     display: none;
   }
   .logo .logo-inside .buttons .fa-users,
-  .logo .logo-inside .buttons .fa-heart {
+.logo .logo-inside .buttons .fa-heart {
     display: none;
   }
   .logo .logo-inside .buttons .fa-bars {
     display: inline-block;
   }
+}
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+#home {
+  font-family: "Rubik", sans-serif;
+  width: 100%;
+  background-image: url("https://htmldemo.net/pronia/pronia/assets/images/slider/bg/1-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#home .main {
+  max-width: 60%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  padding: 100px 0;
+}
+#home .main .left {
+  width: 50%;
+}
+#home .main .left #discount {
+  font-size: 50px;
+}
+#home .main .left h1 {
+  font-size: 60px;
+  margin: 20px 0;
+}
+#home .main .left p {
+  font-size: 20px;
+}
+#home .main .right {
+  width: 50%;
+}
+#home i {
+  position: absolute;
+  padding: 20px 20px;
+  border-radius: 4px;
+  background-color: white;
+  transition: 0.5s;
+  z-index: 1;
+}
+#home i:hover {
+  background-color: #abd373;
+  transition: 0.5s;
+}
+#home .fa-angle-right {
+  right: 0;
+  top: 50%;
+}
+#home .fa-angle-left {
+  left: 0;
+  top: 50%;
 }/*# sourceMappingURL=main.css.map */

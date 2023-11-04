@@ -1,0 +1,15 @@
+button{
+    font-family: "Rubik", sans-serif;
+    padding: 20px 35px;
+    border-radius: 35px;
+    background-color: #abd373;
+    border-style: none;
+    color: white;
+    font-weight: bold;
+    margin: 10px 10px;
+    transition: 0.5s;
+}
+button:hover{
+    background-color: #525252;
+    transition: 0.5s;
+}
