@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+#collections {
+    font-family: "Rubik", sans-serif;
+    padding: 50px 0;
+    .types-of-flowers {
+        max-width: 80%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        .pots {
+            min-width: 67%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+
+            .pots-texts {
+                max-width: 40%;
+                padding: 60px 0;
+                margin-left: 60px;
+
+                h2 {
+                    margin: 10px 0;
+                    color: rgb(76, 76, 76);
+                    font-size: 28px;
+                }
+            }
+        }
+        .port{
+            min-width: 27%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            .port-texts{
+                width: 50%;
+                margin: auto;
+                text-align: center;
+                padding: 60px 0;
+                height: 100%;
+                h2{
+                    margin: 10px 0;
+                    color: rgb(76, 76, 76);
+                    font-size: 28px;
+                }
+            }
+        }
+
+        .pots.two {
+            background-image: url('https://htmldemo.net/pronia/pronia/assets/images/banner/1-4-770x300.jpg');
+        }
+
+        .pots.one {
+            background-image: url('https://htmldemo.net/pronia/pronia/assets/images/banner/1-1-770x300.jpg');
+        }
+        .port.one{
+            background-image: url('https://htmldemo.net/pronia/pronia/assets/images/banner/1-2-370x300.jpg');
+        }
+        .port.two{
+            background-image: url('https://htmldemo.net/pronia/pronia/assets/images/banner/1-3-370x300.jpg');
+        }
+        .animation{
+            position: relative;
+            .top{
+                width: 100%;
+                height: 50%;
+                background-color: black;
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                transition: 2s;
+            }
+            .bottom{
+                width: 100%;
+                height: 50%;
+                background-color: black;
+                opacity: 0;
+                position: absolute;
+                bottom: 0;
+                transition: 2s;
+
+            }
+            .right{
+                width: 50%;
+                height: 100%;
+                background-color: black;
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                transition: 2s;
+
+            }
+            .left{
+                width: 50%;
+                height: 100%;
+                background-color: black;
+                opacity: 0;
+                position: absolute;
+                right: 0;
+                top: 0;
+                transition: 2s;
+
+            }
+        }
+        .animation:hover{
+            .top{
+                opacity: 0.1;
+                height: 0;
+                transition: 2s;
+            }
+            .bottom{
+                opacity: 0.1;
+                height: 0;
+                transition: 2s;
+            }
+            .right{
+                opacity: 0.1;
+                width: 0;
+                transition: 2s;
+            }
+            .left{
+                opacity: 0.1;
+                width: 0;
+                transition: 2s;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 678px) {
+    #collections{
+        .types-of-flowers{
+            .pots{
+                width: 100%;
+            }
+            .port{
+                width: 100%;
+            }
+        }
+    }
+}
+@media screen and (min-width: 679px) and (max-width: 1024px) {
+    #collections{
+        .types-of-flowers{
+            .pots{
+                width: 100%;
+            }
+            .port{
+                width: 48%;
+            }
+        }
+    }
+}

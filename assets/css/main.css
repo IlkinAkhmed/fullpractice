@@ -22,12 +22,120 @@ button:hover {
   list-style-type: none;
 }
 
+footer {
+  background-image: url("	https://htmldemo.net/pronia/pronia/assets/images/footer/bg/1-1920x465.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: "Rubik", sans-serif;
+  color: rgb(54, 53, 53);
+}
+footer .footer-inside {
+  max-width: 80%;
+  min-height: 250px;
+  margin: auto;
+  padding: 100px 0;
+}
+footer .footer-inside .cards {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+footer .footer-inside .cards .card {
+  width: 18%;
+  padding: 20px;
+}
+footer .footer-inside .cards .card h3 {
+  margin-bottom: 20px;
+}
+footer .footer-inside .cards .card ul li {
+  margin: 10px 0;
+}
+footer .footer-inside .cards .card a {
+  color: rgb(54, 53, 53);
+  transition: 0.3s;
+}
+footer .footer-inside .cards .card a:hover {
+  color: blue;
+  transition: 0.3s;
+}
+footer .footer-inside .cards .card .description {
+  margin: 20px 0;
+}
+footer .footer-inside .cards .card .social-media {
+  width: 80%;
+  display: flex;
+  gap: 10px;
+}
+footer .footer-inside .cards .card .social-media i {
+  border: 1px solid rgb(54, 53, 53);
+  color: rgb(54, 53, 53);
+  padding: 10px;
+  cursor: pointer;
+}
+footer .footer-inside .cards .card .social-media .fa-facebook-f:hover {
+  color: blue;
+}
+footer .footer-inside .cards .card .social-media .fa-twitter:hover {
+  color: blue;
+}
+footer .footer-inside .cards .card .social-media .fa-instagram:hover {
+  color: rgb(192, 0, 64);
+}
+footer .footer-inside .cards .card .social-media .fa-youtube:hover {
+  color: red;
+}
+footer .footer-inside .cards .card .address {
+  margin: 20px 0;
+}
+
+@media screen and (max-width: 576px) {
+  footer .footer-inside .cards {
+    flex-wrap: wrap;
+  }
+  footer .footer-inside .cards .card {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  footer .footer-inside .cards {
+    flex-wrap: wrap;
+  }
+  footer .footer-inside .cards .card {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  footer .footer-inside .cards {
+    flex-wrap: wrap;
+  }
+  footer .footer-inside .cards .card {
+    width: 33%;
+  }
+}
+@media screen and (min-width: 993px) and (max-width: 1124px) {
+  footer .footer-inside .cards {
+    flex-wrap: wrap;
+  }
+  footer .footer-inside .cards .card {
+    width: 25%;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+
 nav {
   font-family: "Rubik", sans-serif;
   position: sticky;
   top: 100px;
   left: 0;
   background-color: white;
+  z-index: 2;
 }
 nav .navInside #navtext {
   width: 50%;
@@ -99,6 +207,7 @@ nav .navInside #navtext .nav-item:hover .submenu {
   overflow-x: hidden;
   height: 100vh;
   transform: translateX(-300px);
+  z-index: 3;
 }
 .resp-nav .resp-nav-inside {
   height: 80%;
@@ -205,6 +314,7 @@ header .headerInside .selectDiv #select {
   top: 0;
   left: 0;
   background-color: white;
+  z-index: 2;
 }
 .logo .logo-inside {
   max-width: 60%;
@@ -233,7 +343,7 @@ header .headerInside .selectDiv #select {
   font-size: 20px;
   cursor: pointer;
 }
-.logo .logo-inside .buttons .fa-basket-shopping {
+.logo .logo-inside .buttons .fa-bag-shopping {
   position: relative;
 }
 .logo .logo-inside .buttons .message {
@@ -244,7 +354,7 @@ header .headerInside .selectDiv #select {
   color: white;
   padding: 5px;
   top: -5px;
-  right: 0;
+  right: -4px;
 }
 .logo .logo-inside .buttons .fa-bars {
   display: none;
@@ -261,7 +371,7 @@ header .headerInside .selectDiv #select {
     display: none;
   }
   .logo .logo-inside .buttons .fa-users,
-.logo .logo-inside .buttons .fa-heart {
+  .logo .logo-inside .buttons .fa-heart {
     display: none;
   }
   .logo .logo-inside .buttons .fa-bars {
@@ -324,4 +434,635 @@ header .headerInside .selectDiv #select {
 #home .fa-angle-left {
   left: 0;
   top: 50%;
+}
+
+@media screen and (max-width: 1045px) {
+  #home .main {
+    flex-wrap: wrap;
+  }
+  #home .main .left {
+    text-align: center;
+    width: 100%;
+  }
+  #home .main .right {
+    width: 100%;
+  }
+  #home .main .right img {
+    width: 100%;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+#products {
+  width: 100%;
+  height: fit-content;
+  font-family: "Rubik", sans-serif;
+}
+#products .container {
+  max-width: 80%;
+  margin: auto;
+}
+#products .container .payment {
+  display: flex;
+  padding: 80px 0;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+#products .container .payment .card {
+  border: 1px dashed #abd373;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+  width: 31%;
+}
+#products .container .payment .card .card-text {
+  margin-left: 10px;
+}
+#products .container .payment .card .card-text h3 {
+  margin-bottom: 5px;
+}
+#products .container .product-text {
+  max-width: 50%;
+  margin: auto;
+  position: relative;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+#products .container .product-text hr {
+  background-color: #abd373;
+  height: 2px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+#products .container .product-text h2 {
+  position: absolute;
+  padding: 0 20px;
+  top: 18px;
+  background-color: white;
+  text-align: center;
+  color: gray;
+}
+#products .container .product-text .features {
+  padding: 50px 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+#products .container .product-text .features a {
+  padding: 15px 20px;
+  border: 1px dashed gray;
+  color: gray;
+  border-radius: 5px;
+}
+#products .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 35px;
+  padding: 20px 0;
+}
+#products .cards .box {
+  width: 22%;
+  cursor: pointer;
+  position: relative;
+  box-sizing: border-box;
+}
+#products .cards .box img {
+  height: 60%;
+  width: 100%;
+}
+#products .cards .box .name h3 {
+  color: gray;
+  transition: 0.4s;
+}
+#products .cards .box .name h3:hover {
+  color: #abd373;
+  transition: 0.4s;
+}
+#products .cards .box .name p {
+  color: #abd373;
+  font-size: 20px;
+  margin: 10px 0;
+}
+#products .cards .box .name .rating {
+  display: flex;
+  gap: 5px;
+}
+#products .cards .box .name .rating i {
+  color: orange;
+}
+#products .cards .box .openedProperties {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  bottom: 190px;
+  transform: translateX(-85px);
+  transition: 0.2s;
+  opacity: 0;
+}
+#products .cards .box .openedProperties i {
+  font-size: 25px;
+  padding: 5px;
+  background-color: white;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  cursor: pointer;
+}
+#products .cards .box .openedProperties i:hover {
+  background-color: rgb(234, 233, 233);
+  color: red;
+}
+#products .cards .box:hover .openedProperties {
+  opacity: 1;
+  transform: translateX(0);
+  transition: 0.2s;
+}
+
+@media screen and (max-width: 576px) {
+  #products .container .payment {
+    flex-wrap: wrap;
+  }
+  #products .container .payment .card {
+    width: 100%;
+  }
+  #products .container .cards {
+    flex-wrap: wrap;
+  }
+  #products .container .cards .box {
+    width: 100%;
+  }
+  #products .container .cards .box .name {
+    text-align: center;
+  }
+  #products .container .cards .box .name .rating {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 577px) and (max-width: 992px) {
+  #products .container .payment {
+    flex-wrap: wrap;
+  }
+  #products .container .payment .card {
+    width: 47%;
+  }
+  #products .container .cards {
+    flex-wrap: wrap;
+  }
+  #products .container .cards .box {
+    width: 47%;
+  }
+}
+@media screen and (min-width: 993px) and (max-width: 1224px) {
+  #products .container .payment {
+    flex-wrap: wrap;
+  }
+  #products .container .payment .card {
+    width: 30%;
+  }
+  #products .container .cards {
+    flex-wrap: wrap;
+  }
+  #products .container .cards .box {
+    width: 30%;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+#collections {
+  font-family: "Rubik", sans-serif;
+  padding: 50px 0;
+}
+#collections .types-of-flowers {
+  max-width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+#collections .types-of-flowers .pots {
+  min-width: 67%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#collections .types-of-flowers .pots .pots-texts {
+  max-width: 40%;
+  padding: 60px 0;
+  margin-left: 60px;
+}
+#collections .types-of-flowers .pots .pots-texts h2 {
+  margin: 10px 0;
+  color: rgb(76, 76, 76);
+  font-size: 28px;
+}
+#collections .types-of-flowers .port {
+  min-width: 27%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#collections .types-of-flowers .port .port-texts {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  padding: 60px 0;
+  height: 100%;
+}
+#collections .types-of-flowers .port .port-texts h2 {
+  margin: 10px 0;
+  color: rgb(76, 76, 76);
+  font-size: 28px;
+}
+#collections .types-of-flowers .pots.two {
+  background-image: url("https://htmldemo.net/pronia/pronia/assets/images/banner/1-4-770x300.jpg");
+}
+#collections .types-of-flowers .pots.one {
+  background-image: url("https://htmldemo.net/pronia/pronia/assets/images/banner/1-1-770x300.jpg");
+}
+#collections .types-of-flowers .port.one {
+  background-image: url("https://htmldemo.net/pronia/pronia/assets/images/banner/1-2-370x300.jpg");
+}
+#collections .types-of-flowers .port.two {
+  background-image: url("https://htmldemo.net/pronia/pronia/assets/images/banner/1-3-370x300.jpg");
+}
+#collections .types-of-flowers .animation {
+  position: relative;
+}
+#collections .types-of-flowers .animation .top {
+  width: 100%;
+  height: 50%;
+  background-color: black;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: 2s;
+}
+#collections .types-of-flowers .animation .bottom {
+  width: 100%;
+  height: 50%;
+  background-color: black;
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  transition: 2s;
+}
+#collections .types-of-flowers .animation .right {
+  width: 50%;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: 2s;
+}
+#collections .types-of-flowers .animation .left {
+  width: 50%;
+  height: 100%;
+  background-color: black;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 2s;
+}
+#collections .types-of-flowers .animation:hover .top {
+  opacity: 0.1;
+  height: 0;
+  transition: 2s;
+}
+#collections .types-of-flowers .animation:hover .bottom {
+  opacity: 0.1;
+  height: 0;
+  transition: 2s;
+}
+#collections .types-of-flowers .animation:hover .right {
+  opacity: 0.1;
+  width: 0;
+  transition: 2s;
+}
+#collections .types-of-flowers .animation:hover .left {
+  opacity: 0.1;
+  width: 0;
+  transition: 2s;
+}
+
+@media screen and (max-width: 678px) {
+  #collections .types-of-flowers .pots {
+    width: 100%;
+  }
+  #collections .types-of-flowers .port {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 679px) and (max-width: 1024px) {
+  #collections .types-of-flowers .pots {
+    width: 100%;
+  }
+  #collections .types-of-flowers .port {
+    width: 48%;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+#comments {
+  font-family: "Rubik", sans-serif;
+  padding: 50px 0;
+  width: 97%;
+  height: fit-content;
+  margin: auto;
+  background-image: url("https://htmldemo.net/pronia/pronia/assets/images/testimonial/bg/1-1-1820x443.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+#comments .client .client-text {
+  max-width: 40%;
+  margin: auto;
+  position: relative;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+#comments .client .client-text hr {
+  background-color: #abd373;
+  height: 2px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+#comments .client .client-text h2 {
+  position: absolute;
+  padding: 0 20px;
+  top: 18px;
+  color: gray;
+  background-color: #F6F6F6;
+  text-align: center;
+}
+#comments .clients-comments-cards {
+  max-width: 80%;
+  margin: auto;
+  padding: 40px 0;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#comments .clients-comments-cards .card {
+  width: 30%;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  position: relative;
+  overflow: hidden;
+}
+#comments .clients-comments-cards .card .card-inside {
+  padding: 30px;
+  color: rgb(67, 67, 67);
+}
+#comments .clients-comments-cards .card .card-inside .image {
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  margin-bottom: 10px;
+  transition: 0.4s;
+}
+#comments .clients-comments-cards .card .card-inside .image img {
+  width: 100%;
+}
+#comments .clients-comments-cards .card .card-inside .client {
+  margin: 20px 0;
+}
+#comments .clients-comments-cards .card .corner {
+  position: absolute;
+  background-color: #abd373;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  top: -100px;
+  right: -100px;
+  display: flex;
+  transition: 0.4s;
+}
+#comments .clients-comments-cards .card .corner i {
+  color: white;
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  font-size: 50px;
+}
+#comments .clients-comments-cards .card:hover .corner {
+  background-color: #525252;
+  transition: 0.4s;
+}
+#comments .clients-comments-cards .card:hover .image {
+  transform: scale(1.2);
+  transition: 0.4s;
+}
+
+@media screen and (max-width: 678px) {
+  #comments .client .client-text {
+    max-width: 70%;
+  }
+  #comments .clients-comments-cards .card {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 679px) and (max-width: 1024px) {
+  #comments .clients-comments-cards .card {
+    width: 47%;
+  }
+}
+#greenPlant {
+  width: 100%;
+}
+#greenPlant .cards {
+  background-image: url("https://htmldemo.net/pronia/pronia/assets/images/brand/bg/1-1170x300.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 80%;
+  padding: 50px 0;
+  margin: 100px auto;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+#greenPlant .cards .card {
+  width: 10%;
+  display: flex;
+  align-items: flex-end;
+}
+#greenPlant .cards .card img {
+  width: 100%;
+  opacity: 0.7;
+}
+
+#blog {
+  font-family: "Rubik", sans-serif;
+}
+#blog .container {
+  max-width: 80%;
+  margin: auto;
+  padding: 50px 0;
+}
+#blog .container .blog-text {
+  max-width: 40%;
+  margin: auto;
+  position: relative;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+#blog .container .blog-text hr {
+  background-color: #abd373;
+  height: 2px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+#blog .container .blog-text h2 {
+  position: absolute;
+  padding: 0 20px;
+  top: 18px;
+  color: gray;
+  background-color: #ffffff;
+  text-align: center;
+}
+#blog .container .cards {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  justify-content: center;
+}
+#blog .container .cards .card {
+  width: 30%;
+  background-color: #f6f7fb;
+  padding: 30px;
+  border-radius: 10px;
+}
+#blog .container .cards .card :first-child {
+  color: #abd373;
+}
+#blog .container .cards .card h3 {
+  margin: 20px 0;
+}
+#blog .container .cards .card .image {
+  height: 50%;
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+  overflow: hidden;
+}
+#blog .container .cards .card .image img {
+  width: 100%;
+  height: 100%;
+}
+#blog .container .cards .card .image .fa-link {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  color: #abd373;
+  background-color: #f6f7fb;
+  padding: 10px;
+  border-radius: 100%;
+  border: 1px solid #abd373;
+}
+
+@media screen and (max-width: 749px) {
+  #blog .container .cards {
+    flex-wrap: wrap;
+  }
+  #blog .container .cards .card {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 740px) and (max-width: 1024px) {
+  #blog .container .cards {
+    flex-wrap: wrap;
+  }
+  #blog .container .cards .card {
+    width: 38%;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+#basket {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-family: "Rubik", sans-serif;
+  width: 400px;
+  background-color: #ffffff;
+  position: fixed;
+  color: rgb(0, 0, 0);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 100vh;
+  z-index: 3;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  transform: translateX(400px);
+}
+#basket .basket-inside {
+  padding: 50px 50px;
+}
+#basket .basket-inside .basketCard {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  width: 100%;
+  position: relative;
+}
+#basket .basket-inside .basketCard img {
+  width: 100px;
+}
+#basket .basket-inside .basketCard .name {
+  line-height: 2;
+}
+#basket .basket-inside .basketCard .name a {
+  color: black;
+}
+#basket .basket-inside .basketCard .remove {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  color: black;
+}
+#basket .close {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  font-size: 20px;
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */

@@ -54,3 +54,20 @@
         top: 50%;
     }
 }
+@media screen and (max-width: 1045px){
+    #home{
+        .main{
+            flex-wrap: wrap;
+            .left{
+                text-align: center;
+                width: 100%;
+            }
+            .right{
+                width: 100%;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

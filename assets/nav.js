@@ -34,3 +34,4 @@ cancelnav.onclick=()=>{
     sidenav.style.transition = '0.4s'
     
 }
+

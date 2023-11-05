@@ -11,6 +11,7 @@ nav {
   top: 100px;
   left: 0;
   background-color: white;
+  z-index: 2;
 
   .navInside {
     #navtext {
@@ -95,6 +96,8 @@ nav {
   overflow-x: hidden;
   height: 100vh;
   transform: translateX(-300px);
+  z-index: 3;
+  
 
   .resp-nav-inside {
     height: 80%;
@@ -160,6 +163,7 @@ nav {
     }
   }
 }
+
 .active {
   height: fit-content!important;
   transform: translateX(0px)!important;

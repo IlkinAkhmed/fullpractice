@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+
+
+#comments {
+    font-family: "Rubik", sans-serif;
+    padding: 50px 0;
+    width: 97%;
+    height: fit-content;
+    margin: auto;
+    background-image: url('https://htmldemo.net/pronia/pronia/assets/images/testimonial/bg/1-1-1820x443.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    .client {
+
+        .client-text {
+            max-width: 40%;
+            margin: auto;
+            position: relative;
+            padding: 30px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            hr {
+                background-color: #abd373;
+                height: 2px;
+                margin-bottom: 20px;
+                width: 100%;
+            }
+
+            h2 {
+                position: absolute;
+                padding: 0 20px;
+                top: 18px;
+                color: gray;
+                background-color: #F6F6F6;
+                text-align: center;
+            }
+        }
+    }
+
+    .clients-comments-cards {
+        max-width: 80%;
+        margin: auto;
+        padding: 40px 0;
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .card {
+            width: 30%;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+            position: relative;
+            overflow: hidden;
+
+            .card-inside {
+                padding: 30px;
+                color: rgb(67, 67, 67);
+
+                .image {
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 100%;
+                    margin-bottom: 10px;
+                    transition: 0.4s;
+
+                    img {
+                        width: 100%;
+
+                    }
+                }
+
+                .client {
+                    margin: 20px 0;
+                }
+
+            }
+
+            .corner {
+                position: absolute;
+                background-color: #abd373;
+                width: 200px;
+                height: 200px;
+                border-radius: 100%;
+                top: -100px;
+                right: -100px;
+                display: flex;
+                transition: 0.4s;
+
+                i {
+                    color: white;
+                    position: absolute;
+                    bottom: 40px;
+                    left: 40px;
+                    font-size: 50px;
+                }
+            }
+        }
+
+        .card:hover {
+            .corner {
+
+                background-color: #525252;
+                transition: 0.4s;
+            }
+
+            .image {
+                transform: scale(1.2);
+                transition: 0.4s;
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 678px) {
+    #comments {
+        .client {
+
+            .client-text {
+                max-width: 70%;
+            }
+        }
+
+        .clients-comments-cards {
+
+            .card {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 679px) and (max-width: 1024px) {
+    #comments {
+        .clients-comments-cards {
+
+            .card {
+                width: 47%;
+            }
+        }
+    }
+}
