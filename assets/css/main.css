@@ -371,7 +371,7 @@ header .headerInside .selectDiv #select {
     display: none;
   }
   .logo .logo-inside .buttons .fa-users,
-  .logo .logo-inside .buttons .fa-heart {
+.logo .logo-inside .buttons .fa-heart {
     display: none;
   }
   .logo .logo-inside .buttons .fa-bars {
@@ -1033,6 +1033,11 @@ header .headerInside .selectDiv #select {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
   transform: translateX(400px);
 }
+#basket .basket-title {
+  position: absolute;
+  top: 20px;
+  left: 118px;
+}
 #basket .basket-inside {
   padding: 50px 50px;
 }
@@ -1058,6 +1063,7 @@ header .headerInside .selectDiv #select {
   right: 0;
   top: 50px;
   color: black;
+  cursor: pointer;
 }
 #basket .close {
   position: absolute;
