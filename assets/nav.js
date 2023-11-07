@@ -6,6 +6,8 @@ const seconddrop = document.querySelectorAll('.acc-li-inside-ul')
 const menubar = document.querySelector(".fa-bars")
 const cancelnav = document.querySelector(".fa-xmark")
 const sidenav = document.querySelector(".resp-nav")
+
+
 for (let i = 0; i < names.length; i++) {
     names[i].addEventListener("click",(e)=>{
         e.preventDefault()
@@ -15,6 +17,8 @@ for (let i = 0; i < names.length; i++) {
     })
     
 }
+
+
 for (let i = 0; i < secondname.length; i++) {
     secondname[i].addEventListener("click",(e)=>{
         e.stopPropagation()
@@ -24,11 +28,15 @@ for (let i = 0; i < secondname.length; i++) {
     })
     
 }
+
+
+
 menubar.onclick=()=>{
     sidenav.style.transform='translateX(0)';
     sidenav.style.transition = '0.4s'
     
 }
+
 cancelnav.onclick=()=>{
     sidenav.style.transform='translateX(-300px)';
     sidenav.style.transition = '0.4s'

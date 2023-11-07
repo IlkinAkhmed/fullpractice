@@ -371,7 +371,7 @@ header .headerInside .selectDiv #select {
     display: none;
   }
   .logo .logo-inside .buttons .fa-users,
-.logo .logo-inside .buttons .fa-heart {
+  .logo .logo-inside .buttons .fa-heart {
     display: none;
   }
   .logo .logo-inside .buttons .fa-bars {
@@ -1027,7 +1027,6 @@ header .headerInside .selectDiv #select {
   position: fixed;
   color: rgb(0, 0, 0);
   overflow-y: scroll;
-  overflow-x: hidden;
   height: 100vh;
   z-index: 3;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
@@ -1060,9 +1059,20 @@ header .headerInside .selectDiv #select {
 }
 #basket .basket-inside .basketCard .remove {
   position: absolute;
-  right: 0;
+  right: -20px;
   top: 50px;
   color: black;
+  cursor: pointer;
+}
+#basket .basket-inside .basketCard .countDiv {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  bottom: 30px;
+  right: 20px;
+  opacity: 0.7;
+}
+#basket .basket-inside .basketCard .countDiv i {
   cursor: pointer;
 }
 #basket .close {
@@ -1070,5 +1080,70 @@ header .headerInside .selectDiv #select {
   left: 20px;
   top: 20px;
   font-size: 20px;
+  cursor: pointer;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#modal {
+  font-family: "Rubik", sans-serif;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.7;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  display: none;
+}
+#modal .container {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  height: 200px;
+  position: relative;
+}
+#modal .container p {
+  color: white;
+  font-size: 25px;
+  width: 100%;
+}
+#modal .container p .fa-magnifying-glass {
+  position: absolute;
+  bottom: 120px;
+  right: 50px;
+  font-size: 20px;
+  color: white;
+}
+#modal .container input {
+  outline: none;
+  width: 90%;
+  border-style: none;
+  background-color: transparent;
+  height: 60px;
+  font-size: 25px;
+  text-align: center;
+  border-bottom: 1px solid white;
+  color: white;
+}
+#modal .container .fa-magnifying-glass {
+  position: absolute;
+  bottom: 120px;
+  right: 50px;
+  font-size: 20px;
+  color: white;
+}
+#modal .fa-xmark {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  color: white;
+  font-size: 30px;
   cursor: pointer;
 }/*# sourceMappingURL=main.css.map */

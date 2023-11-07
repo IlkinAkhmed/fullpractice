@@ -3,6 +3,8 @@ const openbasket = document.querySelector(".fa-bag-shopping");
 const basket = document.querySelector("#basket");
 const closebasket = document.querySelector(".close");
 const basketDiv = document.querySelector(".basket-inside");
+const message = document.querySelector(".message");
+
 
 openbasket.onclick = () => {
   basket.style.transform = "translateX(0)";
@@ -25,9 +27,17 @@ let productArr = [];
 
 let productArrBasket = [];
 
+if (getLocalStorage('basket')) {
+  message.textContent = getLocalStorage('basket').length
+}
 if (getLocalStorage("basket")) {
   productArrBasket = getLocalStorage("basket");
 }
+
+
+
+
+
 // if (getLocalStorage('basket')) {
 //     productArrBasket.push(getLocalStorage('basket'))
 // }
@@ -36,7 +46,7 @@ if (getLocalStorage("basket")) {
 const cards = document.querySelectorAll(".cards");
 const url = "http://localhost:3000/Products";
 
-function createCard(id, image, name, price) {
+function createCard(id, image, name, price, quantity) {
   const box = document.createElement("div");
   const add = document.createElement("button");
   add.textContent = "Add To Basket";
@@ -57,19 +67,29 @@ function createCard(id, image, name, price) {
             <div class="openedProperties">
               <i class="fa-regular fa-heart"></i>
               <i class="fa-regular fa-eye"></i>
+              <i class="fa-solid fa-cart-shopping"></i>
             </div>
     `;
 
   add.onclick = () => {
+
+    if (productArr.find(x => x.id === id)) {
+      return
+    }
+
     productArr.push({
       id,
       image,
       name,
       price,
+      count: 1
     });
-    setLocalStorage("basket", productArr);
-    basketDiv.innerHTML = "";
 
+    setLocalStorage("basket", productArr);
+    message.innerHTML = ''
+    message.textContent = getLocalStorage("basket").length
+
+    basketDiv.innerHTML = "";
     productArr = getLocalStorage("basket");
     productArr.forEach((items) => {
       createCardForBasketPage(items.id, items.image, items.name, items.price);
@@ -92,7 +112,7 @@ async function getData() {
 getData();
 
 // getting api for new products
-const url2 = "http://localhost:3000/newProducts";
+const urlForNew = "http://localhost:3000/newProducts";
 
 function createCardForNewProducts(id, image, name, price) {
   const newbox = document.createElement("div");
@@ -115,8 +135,14 @@ function createCardForNewProducts(id, image, name, price) {
             <div class="openedProperties">
               <i class="fa-regular fa-heart"></i>
               <i class="fa-regular fa-eye"></i>
+              <i class="fa-solid fa-cart-shopping"></i>
             </div>
     `;
+
+
+  if (productArr.find(x => x.id === id)) {
+    return
+  }
 
   add.onclick = () => {
     productArr.push({
@@ -124,9 +150,16 @@ function createCardForNewProducts(id, image, name, price) {
       image,
       name,
       price,
+      count: 1
     });
+
     setLocalStorage("basket", productArr);
+
     basketDiv.innerHTML = "";
+
+    message.innerHTML = ''
+    message.textContent = getLocalStorage("basket").length
+
     productArr = getLocalStorage("basket");
     productArr.forEach((items) => {
       createCardForBasketPage(items.id, items.image, items.name, items.price);
@@ -139,7 +172,7 @@ function createCardForNewProducts(id, image, name, price) {
 }
 
 async function getNewProduct() {
-  const res = await axios(url2);
+  const res = await axios(urlForNew);
   data = res.data;
   data.forEach((items) => {
     createCardForNewProducts(items.id, items.image, items.name, items.price);
@@ -152,6 +185,36 @@ getNewProduct();
 function createCardForBasketPage(id, image, name, price) {
   const card = document.createElement("div");
   const remove = document.createElement("a");
+  const countDiv = document.createElement("div");
+  const increase = document.createElement("a")
+  const decrease = document.createElement("a")
+  const count = document.createElement("p")
+
+  count.textContent = ''
+  productArrBasket.forEach(element => {
+    if (id === element.id) {
+      count.textContent = element.count
+    }
+  });
+
+  increase.innerHTML = '<i class="fa-solid fa-chevron-up"></i>'
+  decrease.innerHTML = '<i class="fa-solid fa-chevron-down"></i>'
+
+
+
+  if (count.textContent >= 1) {
+    decrease.onclick = () => {
+      count.textContent--
+    }}
+
+ 
+  
+  increase.onclick = () => {
+    count.textContent++
+  }
+
+
+
   remove.innerHTML = `<i class="fa-solid fa-trash"></i>`;
 
   card.innerHTML = `
@@ -164,19 +227,28 @@ function createCardForBasketPage(id, image, name, price) {
     `;
   remove.classList.add("remove");
   card.classList.add("basketCard");
-  card.append(remove);
+  countDiv.classList.add('countDiv')
+  countDiv.append(increase, count, decrease)
+  card.append(remove, countDiv);
   basketDiv.append(card);
 
   remove.onclick = () => {
     productArrBasket = productArrBasket.filter((x) => x.id !== id);
-    console.log(productArrBasket);
     setLocalStorage("basket", productArrBasket);
-    basketDiv.innerHTML=""
+
+    message.innerHTML = ''
+    message.textContent = getLocalStorage("basket").length
+
+    basketDiv.innerHTML = ""
     productArrBasket.forEach((items) => {
-        createCardForBasketPage(items.id, items.image, items.name, items.price);
-      });
+      createCardForBasketPage(items.id, items.image, items.name, items.price);
+    });
   };
 }
-productArrBasket.forEach((items) => {
-  createCardForBasketPage(items.id, items.image, items.name, items.price);
-});
+
+function addCardToBasketPage() {
+  productArrBasket.forEach((items) => {
+    createCardForBasketPage(items.id, items.image, items.name, items.price);
+  });
+}
+addCardToBasketPage()

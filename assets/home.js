@@ -21,3 +21,24 @@ btnright.onclick=()=>{
         image.style.transition = '0.5s'
     }
 }
+
+
+
+
+// search Modal
+
+const searchbtn = document.querySelector(".fa-magnifying-glass")
+const closemodal = document.querySelector("#modal .fa-xmark")
+const input = document.querySelector("#input")
+const modal = document.querySelector("#modal")
+
+searchbtn.onclick=()=>{
+    modal.style.display = 'flex'
+}
+closemodal.onclick=()=>{
+    modal.style.display = 'none'
+}
+input.addEventListener('focus',(e)=>{
+    e.preventDefault()
+    input.style.border = 'none'
+})
